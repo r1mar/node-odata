@@ -1,5 +1,5 @@
 {
-  "name": "node-odata",
+  "name": "@r1mar/nota",
   "version": "0.7.16",
   "private": false,
   "description": "A module for easily create a REST API based on oData protocol",
