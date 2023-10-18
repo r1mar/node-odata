@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/TossShinHwa/node-odata.git"
+    "url": "https://github.com/r1mar/node-odata.git"
   },
   "engines": {
     "node": ">=0.12"

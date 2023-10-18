@@ -1,17 +1,19 @@
-node-odata
+@r1mar/nota
 ==========
+
+@r1mar/nota is a fork of [node-odata](https://github.com/zackyang000/node-odata)
 
 Create awesome REST APIs abide by [OData Protocol v4](http://www.odata.org/).  Its purpose is to easier to creating APIs, make you more focus on business logic.
 
   [![NPM Version](https://img.shields.io/npm/v/node-odata.svg?style=flat)](https://www.npmjs.org/package/node-odata)
-  [![npm](https://img.shields.io/npm/dm/node-odata.svg?style=flat)](https://www.npmjs.org/package/node-odata)
+  [![npm](https://img.shields.io/npm/dm/node-odata.svg?style=flat)](https://www.npmjs.org/package/node-odata)<!--
   [![Build Status](https://travis-ci.org/zackyang000/node-odata.svg?branch=master)](https://travis-ci.org/zackyang000/node-odata)
   [![Coverage Status](https://coveralls.io/repos/github/zackyang000/node-odata/badge.svg?branch=master)](https://coveralls.io/github/zackyang000/node-odata?branch=master)
-  [![Dependency Status](https://david-dm.org/zackyang000/node-odata.svg?style=flat)](https://david-dm.org/zackyang000/node-odata)
+  [![Dependency Status](https://david-dm.org/zackyang000/node-odata.svg?style=flat)](https://david-dm.org/zackyang000/node-odata)-->
   [![License](http://img.shields.io/npm/l/node-odata.svg?style=flat)](https://raw.githubusercontent.com/zackyang000/node-odata/master/LICENSE)
 
 ```JavaScript
-const odata = require('node-odata');
+const odata = require('@r1mar/nota');
 const server = odata('mongodb://localhost/my-app');
 const mongoose = require('mongoose');
 const connection = mongoose.connect('mongodb://localhost:27017/example', null, (err) => {
@@ -136,7 +138,7 @@ With entities you can provide a kind of virtual table via the OData service. The
 Here an example of an entity implementation. To define an entity, you must call the server.entity method. Pass the name of the entity as the first parameter. The second parameter allows you to pass the implementation for each operation. If you do not pass a handler for an operation, calling that operation returns "Not Implemented". With the third parameter you pass the description of your entity. An object with the $Key property in which you list the names of all key columns. The other properties of the object describe the properties of your entity.
 
 ```JavaScript
-const odata = require('node-odata');
+const odata = require('@r1mar/nota');
 const server = odata();
 
 server.complexType('fullName', {
@@ -206,7 +208,7 @@ DELETE current-user
 Singleton can be defined standalone.
 
 ```JavaScript
-const odata = require('node-odata');
+const odata = require('@r1mar/nota');
 const server = odata();
 
 const entity = server.singleton('user', {
@@ -237,7 +239,7 @@ const entity = server.singleton('user', {
 Or a singleton can be created for an existing entity.
 
 ```JavaScript
-const odata = require('node-odata');
+const odata = require('@r1mar/nota');
 const server = odata();
 
 ...
@@ -402,7 +404,7 @@ action.addAfter(async (req, res, next) => {
 
 ## Batch request
 
-node-odata is able to process a collected request. This means the client can send multiple operations with one query. The request must be sent to the $batch Url with a POST request.
+@r1mar/nota is able to process a collected request. This means the client can send multiple operations with one query. The request must be sent to the $batch Url with a POST request.
 
 ```
 POST $batch
@@ -546,15 +548,15 @@ entity.annotate('filterable', ['author', 'title']);
 
 ## Current State
 
-node-odata is currently at an beta stage, it is stable but not 100% feature complete. 
-node-odata is written by ECMAScript 6 then compiled by [babel](https://babeljs.io/).
+@r1mar/nota is currently at an beta stage, it is stable but not 100% feature complete. 
+@r1mar/nota is written by ECMAScript 6 then compiled by [babel](https://babeljs.io/).
 It currently supports MongoDB only. 
 The current target is to add more features and make to support other database. (eg. MySQL, PostgreSQL).
 
 ## Installation
 
 ```
-npm install node-odata
+npm install @r1mar/nota
 ```
 
 
@@ -640,9 +642,9 @@ npm install node-odata
 
 ## CONTRIBUTING
 
-We always welcome contributions to help make node-odata better. Please feel free to contribute to this project. The package-lock.json file was last created with node version 18.17.0. Current implementation ist tested with MongoDB version 4.4.4.
+We always welcome contributions to help make @r1mar/nota better. Please feel free to contribute to this project. The package-lock.json file was last created with node version 18.17.0. Current implementation ist tested with MongoDB version 4.4.4.
 
 
 ## LICENSE
 
-node-odata is licensed under the MIT license. See [LICENSE](LICENSE) for more information.
+@r1mar/nota is licensed under the MIT license. See [LICENSE](LICENSE) for more information.
