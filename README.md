@@ -3,6 +3,8 @@
 
 @r1mar/nota is a fork of [node-odata](https://github.com/zackyang000/node-odata)
 
+**This package is currently not supported. Please use @bitech-ag/nota instead.**
+
 Create awesome REST APIs abide by [OData Protocol v4](http://www.odata.org/).  Its purpose is to easier to creating APIs, make you more focus on business logic.
 
   [![NPM Version](https://img.shields.io/npm/v/node-odata.svg?style=flat)](https://www.npmjs.org/package/node-odata)
